@@ -66,16 +66,19 @@ def prime_factors(n):
 Память: O(k), где k — количество простых множителей в ответе
 
 Задание 7
+```
 SELECT
     id,
     scores,
     RANK() OVER (ORDER BY scores DESC) AS rating_position
 FROM examination;
+```
 
 Задание 8
 минимально 30 и максимально 600 строк
 
 Задание 9
+```
 SELECT
     a.client_id
 FROM account a
@@ -85,6 +88,7 @@ WHERE t.transaction_date >= CURRENT_DATE - INTERVAL '1 month'
   AND t.type = 'BUY'
 GROUP BY a.client_id
 HAVING SUM(t.amount) < 5000;
+```
 
 Задание 10
 234
